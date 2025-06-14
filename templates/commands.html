@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Команды</h2>
+<table>
+  <tr><th>ID</th><th>Аккаунт</th><th>Действие</th><th>URL</th><th>Статус</th></tr>
+  {% for c in commands %}
+  <tr>
+    <td>{{ c[0] }}</td><td>{{ c[1] }}</td><td>{{ c[2] }}</td>
+    <td><a href="{{ c[3] }}" target="_blank">Ссылка</a></td>
+    <td>{{ c[4] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

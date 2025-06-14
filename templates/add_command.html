@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Добавить команду</h2>
+<form method="post">
+  <label>Аккаунт:</label>
+  <select name="account_id">
+    {% for id, name in accounts %}
+    <option value="{{ id }}">{{ name }}</option>
+    {% endfor %}
+  </select><br><br>
+  <label>Тип действия:</label>
+  <select name="command">
+    <option value="like">❤️ Лайк</option>
+    <option value="follow">➕ Подписка</option>
+    <option value="view">👁️ Просмотр</option>
+  </select><br><br>
+  <label>URL:</label>
+  <input name="target_url" type="text"><br><br>
+  <button type="submit">Добавить</button>
+</form>
+{% endblock %}

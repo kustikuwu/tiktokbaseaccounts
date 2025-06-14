@@ -1,0 +1,3 @@
+name,proxy
+acc1,http://user:pass@ip:port
+acc2,http://another.proxy

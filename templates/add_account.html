@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Добавить аккаунт</h2>
+<form method="post" enctype="multipart/form-data">
+  <label>Имя:</label>
+  <input name="name" type="text"><br><br>
+  <label>Session-файл (.json):</label>
+  <input name="session_file" type="file"><br><br>
+  <button type="submit">Добавить</button>
+</form>
+{% endblock %}

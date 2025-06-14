@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Аккаунты</h2>
+<table>
+  <tr><th>ID</th><th>Имя</th><th>Сессия</th></tr>
+  {% for a in accounts %}
+  <tr><td>{{ a[0] }}</td><td>{{ a[1] }}</td><td>{{ a[2] }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}
